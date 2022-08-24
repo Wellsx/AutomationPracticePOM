@@ -1,0 +1,24 @@
+{
+  "name": "automationpracticepom",
+  "version": "1.0.0",
+  "description": "Automationpractice POM tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wellsx/AutomationPracticePOM.git"
+  },
+  "author": "Stefan Veleusic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wellsx/AutomationPracticePOM/issues"
+  },
+  "homepage": "https://github.com/Wellsx/AutomationPracticePOM#readme",
+  "dependencies": {
+    "@faker-js/faker": "^7.4.0",
+    "cypress": "^10.6.0",
+    "moment": "^2.29.4"
+  }
+}
