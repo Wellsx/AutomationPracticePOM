@@ -19,6 +19,7 @@
   "dependencies": {
     "@faker-js/faker": "^7.4.0",
     "cypress": "^10.6.0",
+    "cypress-real-events": "^1.7.1",
     "moment": "^2.29.4"
   }
 }

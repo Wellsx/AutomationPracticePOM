@@ -1,28 +1,20 @@
 class Header {
-  visit() {
+  login() {
     cy.visit('/');
     cy.get('.login').should('be.visible').click();
     cy.get('#login_form').should('be.visible');
   }
-
-  enterEmail() {
-    cy.get('#email')
-      .should('be.visible')
-      .type(Data.email)
-      .should('have.value', Data.email);
-    return this;
-  }
-  enterPass() {
-    cy.get('#passwd')
-      .should('be.visible')
-      .type(Data.password)
-      .should('have.value', Data.password);
-    return this;
-  }
-  clickSubmit() {
-    cy.get('#SubmitLogin').should('be.visible').click();
-    cy.url().should('include', 'controller=my-account');
-    cy.get('.page-heading').should('contain', 'My account');
-  }
 }
 export default Header;
+
+class Women {
+  womenMenu() {cy.visit('/');
+
+    cy.get('[title=Women]').first().click();
+    cy.url().should(
+      'eq',
+      'http://automationpractice.com/index.php?id_category=3&controller=category'
+    );
+  }
+}
+export default Women;
