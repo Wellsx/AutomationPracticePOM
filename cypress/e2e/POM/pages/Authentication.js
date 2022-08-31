@@ -1,4 +1,4 @@
-class signInPage {
+class Authentication {
   enterEmail(email) {
     cy.get('#email')
       .should('be.visible')
@@ -15,8 +15,11 @@ class signInPage {
   }
   clickSubmit() {
     cy.get('#SubmitLogin').should('be.visible').click();
-    cy.url().should('include', 'controller=my-account');
+    cy.url().should(
+      'eq',
+      Cypress.config().baseUrl + '/index.php?controller=my-account'
+    );
     cy.get('.page-heading').should('contain', 'My account');
   }
 }
-export default signInPage;
+export default new Authentication();

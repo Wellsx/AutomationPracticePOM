@@ -1,12 +1,12 @@
-import { faker } from "@faker-js/faker";
-import moment from "moment";
+import { faker } from '@faker-js/faker';
+import moment from 'moment';
 
-faker.locale = "en_AU";
+faker.locale = 'en_AU';
 
-moment.locale("en-ca");
+moment.locale('en-ca');
 
 class Data {
-  today = moment().format("L");
+  today = moment().format('L');
 
   // Time stamp initialization
   getUnixTimeStamp() {
@@ -15,7 +15,7 @@ class Data {
     return num;
   }
 
-  uniqueEmailAddress = "test+_" + this.getUnixTimeStamp() + "@testing.qa";
+  uniqueEmailAddress = 'test+_' + this.getUnixTimeStamp() + '@testing.qa';
 
   faker = faker;
 
@@ -25,26 +25,31 @@ class Data {
 
   new_firstName = faker.name.firstName();
 
+  new_lastName = faker.name.lastName();
+
   lastName = faker.name.lastName();
 
   address = faker.address.streetAddress();
 
-  postcode = "12345";
+  postcode = '12345';
 
-  password = "Pass123";
+  password = 'Pass123';
 
   city = faker.address.cityName();
 
-  state = "Alabama";
+  state = 'Alabama';
 
-  stateValue = "1";
+  stateValue = '1';
 
-  phoneNumber = faker.phone.phoneNumber("+ 387 ## ### ###");
+  phoneNumber = faker.phone.phoneNumber('+ 387 ## ### ###');
 
-  userEmail = "asd@asdsa.asda";
+  userEmail = 'asd@asdsa.asda';
 
-  userPassword = "M0jaLozinka";
+  userPassword = 'M0jaLozinka';
+
+  man = '1';
+
+  woman = '2';
 }
 
 export default new Data();
-

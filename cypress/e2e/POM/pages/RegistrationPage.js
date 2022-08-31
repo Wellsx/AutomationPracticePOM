@@ -1,4 +1,4 @@
-class registrationPage {
+class Register {
   createAccount(uniqueEmailAddress) {
     cy.get('#email_create')
       .should('be.visible')
@@ -8,93 +8,161 @@ class registrationPage {
     cy.get('#SubmitCreate').should('be.visible').click();
 
     cy.url().should(
-      'contain',
-      'controller=authentication&back=my-account#account-creation'
+      'eq',
+      Cypress.config().baseUrl +
+        '/index.php?controller=authentication&back=my-account#account-creation'
     );
     return this;
   }
-  inputFirstName(firstName) {
+
+  select_Gender(gender) {
+    cy.get('#id_gender' + '' + gender)
+      .click()
+      .parent()
+      .should('be.visible')
+      .and('have.class', 'checked');
+
+    return this;
+  }
+  input_FirstName(firstName) {
     cy.get('#customer_firstname')
       .should('be.visible')
       .type(firstName)
       .should('have.value', firstName);
+
+    return this;
   }
 
-  inputLastName(lastName) {
+  input_LastName(lastName) {
     cy.get('#customer_lastname')
       .should('be.visible')
       .type(lastName)
       .should('have.value', lastName);
+
+    return this;
   }
 
-  verifyEmail(uniqueEmailAddress) {
+  verify_Email(uniqueEmailAddress) {
     cy.get('#email').should('be.visible').and('have.value', uniqueEmailAddress);
+
+    return this;
   }
 
-  inputPassword(password) {
+  input_NewEmail(new_Email) {
+    cy.get('#email')
+      .should('be.visible')
+      .clear()
+      .type(new_Email)
+      .should('have.value', new_Email);
+
+    return this;
+  }
+
+  input_Password(password) {
     cy.get('#passwd')
       .should('be.visible')
       .type(password)
       .should('have.value', password);
+
+    return this;
   }
 
-  inputNewFirstName(new_firstName) {
+  input_AddressFirstName(new_firstName) {
     cy.get('#firstname')
       .should('be.visible')
       .clear()
       .type(new_firstName)
       .should('have.value', new_firstName);
+
+    return this;
   }
 
-  verifyLastName(lastName) {
-    cy.get('#lastname').should('be.visible').and('have.value', lastName);
+  input_AddressLastName(address_lastName) {
+    cy.get('#lastname')
+      .should('be.visible')
+      .clear()
+      .type(address_lastName)
+      .should('have.value', address_lastName);
+
+    return this;
   }
 
-  inputAddress(address) {
+  verify_AddressFirstName(address_firstName) {
+    cy.get('#firstname')
+      .should('be.visible')
+      .and('have.value', address_firstName);
+
+    return this;
+  }
+  verify_AddressLastName(address_lastName) {
+    cy.get('#lastname')
+      .should('be.visible')
+      .and('have.value', address_lastName);
+
+    return this;
+  }
+
+  input_Address(address) {
     cy.get('#address1')
       .should('be.visible')
       .type(address)
       .should('have.value', address);
+
+    return this;
   }
 
-  inputCity(city) {
+  input_City(city) {
     cy.get('#city').should('be.visible').type(city).should('have.value', city);
+
+    return this;
   }
 
-  selectState(state) {
+  select_State(state) {
     cy.get('#id_state').select(state).should('have.value', '1');
+
+    return this;
   }
 
-  inputPostcode(postcode) {
+  input_Postcode(postcode) {
     cy.get('#postcode')
       .should('be.visible')
       .type(postcode)
       .should('have.value', postcode);
+
+    return this;
   }
 
-  selectCountry() {
+  select_Country() {
     cy.get('#id_country').select('United States').should('have.value', '21');
+
+    return this;
   }
 
-  inputPhoneNumber(phoneNumber) {
+  input_PhoneNumber(phoneNumber) {
     cy.get('#phone_mobile')
       .should('be.visible')
       .type(phoneNumber)
       .should('have.value', phoneNumber);
+
+    return this;
   }
 
-  inputAlias(address) {
+  input_Alias(address) {
     cy.get('#alias')
       .should('be.visible')
       .clear()
       .type(address)
       .should('have.value', address);
+
+    return this;
   }
 
   submitAccount() {
     cy.get('#submitAccount').should('be.visible').click();
     cy.url().should('contain', 'controller=my-account');
     cy.get('.logout').should('be.visible');
+
+    return this;
   }
 }
-export default registrationPage;
+export default new Register();

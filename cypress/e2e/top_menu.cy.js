@@ -1,17 +1,18 @@
-import TopMenu from './components/top-menu';
 import 'cypress-real-events/support';
+import topMenu from './POM/components/top-menu';
+import homePage from './POM/pages/HomePage';
 
 describe('Top menu test', () => {
   it('Test all hover menus', () => {
-    const topmenu = new TopMenu();
-
-    topmenu.women();
-    topmenu.womenTshirts();
-    topmenu.womenBlouses();
-    topmenu.dresses();
-    topmenu.casualDresses();
-    topmenu.eveningDresses();
-    topmenu.summerDresses();
-    topmenu.tshirts();
+    homePage.visit_HomePage();
+    topMenu
+      .women()
+      .womenBlouses()
+      .womenTshirts()
+      .dresses()
+      .casualDresses()
+      .eveningDresses()
+      .summerDresses()
+      .tshirts();
   });
 });

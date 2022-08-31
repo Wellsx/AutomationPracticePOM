@@ -4,7 +4,8 @@
   "description": "Automationpractice POM tests",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "npx cypress open --e2e --browser chrome"
   },
   "repository": {
     "type": "git",
@@ -17,9 +18,11 @@
   },
   "homepage": "https://github.com/Wellsx/AutomationPracticePOM#readme",
   "dependencies": {
-    "@faker-js/faker": "^7.4.0",
     "cypress": "^10.6.0",
     "cypress-real-events": "^1.7.1",
     "moment": "^2.29.4"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.4.0"
   }
 }
