@@ -1,14 +1,13 @@
-import signInPage from './pages/signInPage';
-import Header from './components/header-component';
+import Authentication from '../e2e/POM/pages/Authentication';
+import Header from './POM/components/Header';
+import HomePage from './POM/pages/HomePage';
 
 describe('Login', () => {
   it('Logs the user in', () => {
-    const signIn = new signInPage();
-    const header = new Header();
-
-    header.visit();
-    signIn.enterEmail();
-    signIn.enterPass();
-    signIn.clickSubmit();
+    HomePage.visit_HomePage();
+    Header.click_SignIn_button();
+    Authentication.enterEmail('test456123@email23.com')
+      .enterPass('123456')
+      .clickSubmit();
   });
 });
