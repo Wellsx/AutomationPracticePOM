@@ -15,7 +15,7 @@ class Data {
     return num;
   }
 
-  uniqueEmailAddress = 'test+_' + this.getUnixTimeStamp() + '@testing.qa';
+  uniqueEmailAddress = 'test+_' + this.getUnixTimeStamp() + '@testing.com';
 
   faker = faker;
 
