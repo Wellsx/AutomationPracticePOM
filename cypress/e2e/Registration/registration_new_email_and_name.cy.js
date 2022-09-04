@@ -1,7 +1,7 @@
-import Data from '../support/data';
-import HomePage from '../e2e/POM/pages/HomePage';
-import RegistrationPage from '../e2e/POM/pages/RegistrationPage';
-import Header from './POM/components/Header';
+import Data from '../../support/data';
+import HomePage from '../../POM/pages/home_page';
+import RegistrationPage from '../../POM/pages/registration_page';
+import Header from '../../POM/components/Header';
 
 describe('Registration', () => {
   it('Register a new user', () => {
