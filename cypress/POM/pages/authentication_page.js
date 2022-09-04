@@ -6,6 +6,7 @@ class Authentication {
       .should('have.value', email);
     return this;
   }
+
   enterPass(password) {
     cy.get('#passwd')
       .should('be.visible')
@@ -22,4 +23,5 @@ class Authentication {
     cy.get('.page-heading').should('contain', 'My account');
   }
 }
+
 export default new Authentication();
