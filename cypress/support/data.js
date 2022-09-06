@@ -55,9 +55,9 @@ class Data {
 
   phoneNumber = faker.phone.phoneNumber('+ 387 ## ### ###');
 
-  userEmail = 'asd@asdsa.asda';
+  userEmail = 'test456123@email23.com';
 
-  userPassword = 'Password1234';
+  userPassword = '123456';
 
   man = '1';
 
@@ -89,8 +89,6 @@ class Data {
       cy.writeFile('cypress/fixtures/female_users.json', records);
     });
   }
-
-  maleUser = maleUsers.users[maleUsers.users.length - 1].email;
 }
 
 export default new Data();

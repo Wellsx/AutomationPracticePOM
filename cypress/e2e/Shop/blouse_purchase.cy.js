@@ -6,6 +6,7 @@ import Blouses from '../../POM/pages/shop/blouses_page';
 import TopMenu from '../../POM/components/top-menu';
 import Checkout from '../../POM/pages/shop/checkout_page';
 import Cart from '../../POM/pages/shop/cart_page';
+import Data from '../../support/data';
 import 'cypress-real-events/support';
 
 describe('Purchase an item as a logged in user', () => {
@@ -15,7 +16,7 @@ describe('Purchase an item as a logged in user', () => {
     Authentication.enterEmail(
       femaleUsers.users[femaleUsers.users.length - 1].email
     );
-    Authentication.enterPass('Pass123').clickSubmit();
+    Authentication.enterPass(Data.password).clickSubmit();
     TopMenu.visit_WomenBlouses();
     Blouses.buy_Blouse();
     Cart.click_Proceed_To_Checkout();

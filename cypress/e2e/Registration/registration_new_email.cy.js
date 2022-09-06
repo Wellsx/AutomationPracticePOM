@@ -1,10 +1,10 @@
-import Data from '../support/data';
-import HomePage from '../POM/pages/home_page';
-import RegistrationPage from '../POM/pages/registration_page';
-import Header from '../POM/components/Header';
+import Data from '../../support/data';
+import HomePage from '../../POM/pages/home_page';
+import RegistrationPage from '../../POM/pages/registration_page';
+import Header from '../../POM/components/Header';
 
 describe('Registration', () => {
-  it('Register a new user', () => {
+  it('Register a new user with a new email', () => {
     HomePage.visit_HomePage();
     Header.click_SignIn_button();
     RegistrationPage.createAccount(Data.uniqueEmailAddress)

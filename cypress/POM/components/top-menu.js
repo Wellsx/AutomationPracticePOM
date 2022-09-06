@@ -40,7 +40,7 @@ class TopMenu {
 
     return this;
   }
-  visit_casualDresses() {
+  visit_CasualDresses() {
     cy.get('[title="Dresses"]').eq(1).realHover();
     cy.get('[title="Casual Dresses"]').eq(1).should('be.visible').click();
     cy.url().should(
@@ -81,6 +81,21 @@ class TopMenu {
     );
     cy.get('.category-name').should('contain', 'T-shirts');
 
+    return this;
+  }
+
+  search(search) {
+    cy.visit('/');
+    cy.get('#search_query_top')
+      .should('be.visible')
+      .clear()
+      .type(search)
+      .type('{enter}')
+      .should('have.value', search);
+
+    cy.url().should('eq', Cypress.config().baseUrl + 'controller=search');
+    cy.get('.navigation_page').should('be.visible').and('have.text', 'Search');
+    cy.get('.lighter').should('be.visible').and('contain', search);
     return this;
   }
 }

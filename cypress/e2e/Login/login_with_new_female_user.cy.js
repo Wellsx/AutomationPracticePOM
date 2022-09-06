@@ -1,7 +1,7 @@
-import Authentication from '../POM/pages/authentication_page';
-import Header from '../POM/components/Header';
-import HomePage from '../POM/pages/home_page';
-import femaleUsers from '../fixtures/female_users.json';
+import Authentication from '../../POM/pages/authentication_page';
+import Header from '../../POM/components/Header';
+import HomePage from '../../POM/pages/home_page';
+import femaleUsers from '../../fixtures/female_users.json';
 
 describe('Login', () => {
   it('Logs the user in', () => {

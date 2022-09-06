@@ -30,6 +30,18 @@ class Authentication {
         '/index.php?controller=order&step=1&multi-shipping=0'
     );
   }
+
+  verify_error() {
+    cy.get('#SubmitLogin').should('be.visible').click();
+    cy.url().should(
+      'eq',
+      Cypress.config().baseUrl + '/index.php?controller=authentication'
+    );
+    cy.get('#center_column')
+      .should('be.visible')
+      .and('contain', 'There is 1 error');
+    cy.get('ol').should('be.visible').and('contain', 'Authentication failed.');
+  }
 }
 
 export default new Authentication();

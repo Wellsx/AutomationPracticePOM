@@ -8,5 +8,12 @@ class Blouses {
     );
     return this;
   }
+  click_Blouse() {
+    cy.get('h5')
+      .find('[title="Blouse"]')
+      .should('be.visible')
+      .and('contain', 'Blouse')
+      .click();
+  }
 }
 export default new Blouses();

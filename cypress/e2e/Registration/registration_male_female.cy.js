@@ -1,7 +1,7 @@
-import Data from '../support/data';
-import HomePage from '../POM/pages/home_page';
-import RegistrationPage from '../POM/pages/registration_page';
-import Header from '../POM/components/Header';
+import Data from '../../support/data';
+import HomePage from '../../POM/pages/home_page';
+import RegistrationPage from '../../POM/pages/registration_page';
+import Header from '../../POM/components/Header';
 
 describe('Registration', () => {
   it('Register a new male user', () => {

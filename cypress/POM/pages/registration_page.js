@@ -118,8 +118,11 @@ class Register {
   }
 
   select_State(state) {
-    cy.get('#id_state').select(state).should('have.value', '1');
-
+    cy.get('#id_state')
+      .select(state)
+      .then(() => {
+        cy.get('#uniform-id_state').find('span').should('have.text', state);
+      });
     return this;
   }
 
@@ -162,6 +165,32 @@ class Register {
     cy.url().should('contain', 'controller=my-account');
     cy.get('.logout').should('be.visible');
 
+    return this;
+  }
+  verify_error_message() {
+    cy.get('#submitAccount').should('be.visible').click();
+    cy.url().should(
+      'eq',
+      Cypress.config().baseUrl + '/index.php?controller=authentication'
+    );
+
+    cy.get('#center_column')
+      .should('be.visible')
+      .and('contain', 'There are 8 errors');
+    cy.get('ol')
+      .children()
+      .should('be.visible')
+      .and('contain', 'You must register at least one phone number.')
+      .and('contain', 'lastname is required.')
+      .and('contain', 'firstname is required.')
+      .and('contain', 'passwd is required.')
+      .and('contain', 'address1 is required.')
+      .and('contain', 'city is required.')
+      .and(
+        'contain',
+        "The Zip/Postal code you've entered is invalid. It must follow this format: 00000"
+      )
+      .and('contain', 'This country requires you to choose a State.');
     return this;
   }
 }

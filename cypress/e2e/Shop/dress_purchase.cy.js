@@ -5,6 +5,7 @@ import TopMenu from '../../POM/components/top-menu';
 import Checkout from '../../POM/pages/shop/checkout_page';
 import Cart from '../../POM/pages/shop/cart_page';
 import EveningDresses from '../../POM/pages/shop/evening_dresses_page';
+import Data from '../../support/data';
 import 'cypress-real-events/support';
 
 describe('Purchasing a dress', () => {
@@ -17,7 +18,7 @@ describe('Purchasing a dress', () => {
     Authentication.enterEmail(
       femaleUsers.users[femaleUsers.users.length - 1].email
     )
-      .enterPass('Pass123')
+      .enterPass(Data.password)
       .clickSubmitCheckoutPage();
     Checkout.address_step()
       .check_terms_of_service()
