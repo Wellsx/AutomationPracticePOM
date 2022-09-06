@@ -85,9 +85,7 @@ class Checkout {
   }
 
   cheque_payment_confirm() {
-    cy.get('.page-subheading')
-      .should('be.visible')
-      .and('contain', ' Check payment');
+    cy.get('.page-subheading').should('be.visible');
     cy.get('p').find('[type="submit"]').should('be.visible').click();
     return this;
   }
