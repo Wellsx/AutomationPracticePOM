@@ -26,8 +26,8 @@ describe('Purchasing 2 items', () => {
       .clickSubmitCheckoutPage();
     Checkout.address_step()
       .check_terms_of_service()
-      .payment_cheque()
       .shipping_step()
+      .payment_cheque()
       .cheque_payment_confirm()
       .confirm_order();
   });
