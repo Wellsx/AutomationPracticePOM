@@ -22,6 +22,14 @@ class Authentication {
     );
     cy.get('.page-heading').should('contain', 'My account');
   }
+  clickSubmitCheckoutPage() {
+    cy.get('#SubmitLogin').should('be.visible').click();
+    cy.url().should(
+      'eq',
+      Cypress.config().baseUrl +
+        '/index.php?controller=order&step=1&multi-shipping=0'
+    );
+  }
 }
 
 export default new Authentication();

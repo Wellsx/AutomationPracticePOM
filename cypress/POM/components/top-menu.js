@@ -1,5 +1,5 @@
 class TopMenu {
-  women() {
+  visit_Women() {
     cy.get('[title=Women]').first().click();
     cy.url().should(
       'eq',
@@ -8,7 +8,7 @@ class TopMenu {
 
     return this;
   }
-  womenTshirts() {
+  visit_WomenTshirts() {
     cy.get('[title=Women]').first().realHover();
     cy.get('[title="T-shirts"]').first().should('be.visible').click();
     cy.url().should(
@@ -19,7 +19,7 @@ class TopMenu {
 
     return this;
   }
-  womenBlouses() {
+  visit_WomenBlouses() {
     cy.get('[title=Women]').first().realHover();
     cy.get('[title="Blouses"]').should('be.visible').click();
     cy.url().should(
@@ -31,7 +31,7 @@ class TopMenu {
     return this;
   }
 
-  dresses() {
+  visit_Dresses() {
     cy.get('[title="Dresses"]').eq(1).click();
     cy.url().should(
       'eq',
@@ -40,7 +40,7 @@ class TopMenu {
 
     return this;
   }
-  casualDresses() {
+  visit_casualDresses() {
     cy.get('[title="Dresses"]').eq(1).realHover();
     cy.get('[title="Casual Dresses"]').eq(1).should('be.visible').click();
     cy.url().should(
@@ -51,7 +51,7 @@ class TopMenu {
 
     return this;
   }
-  eveningDresses() {
+  visit_EveningDresses() {
     cy.get('[title="Dresses"]').eq(1).realHover();
     cy.get('[title="Evening Dresses"]').eq(1).should('be.visible').click();
     cy.url().should(
@@ -62,7 +62,7 @@ class TopMenu {
 
     return this;
   }
-  summerDresses() {
+  visit_SummerDresses() {
     cy.get('[title="Dresses"]').eq(1).realHover();
     cy.get('[title="Summer Dresses"]').eq(1).should('be.visible').click();
     cy.url().should(
@@ -73,7 +73,7 @@ class TopMenu {
 
     return this;
   }
-  tshirts() {
+  visit_Tshirts() {
     cy.get('[title="T-shirts"]').eq(1).should('be.visible').click();
     cy.url().should(
       'eq',

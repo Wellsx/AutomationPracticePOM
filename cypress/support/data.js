@@ -80,6 +80,7 @@ class Data {
       cy.writeFile('cypress/fixtures/male_users.json', records);
     });
   }
+
   save_email_female(user) {
     cy.readFile('cypress/fixtures/female_users.json').then((records) => {
       records.users.push({
@@ -88,6 +89,8 @@ class Data {
       cy.writeFile('cypress/fixtures/female_users.json', records);
     });
   }
+
+  maleUser = maleUsers.users[maleUsers.users.length - 1].email;
 }
 
 export default new Data();
