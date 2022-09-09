@@ -1,4 +1,6 @@
-## [automationpractice.com](http://automationpractice.com/index.php?) end to end page object model frontend automated tests using [Cypress.io](https://www.cypress.io/)
+# [Cypress.io](https://www.cypress.io/) end-to-end automated tests using Page Object Model (POM) design
+
+## [automationpractice.com](http://automationpractice.com/index.php?)
 
 <details>
   <summary><b>Registration</b></summary>
