@@ -4,7 +4,7 @@ import ContactUs from '../../POM/pages/contact_us_page';
 import Data from '../../support/data';
 
 describe('Customer Service message test', () => {
-  it('Typing a sample message and uploading an image', () => {
+  it('Typing a sample message, uploading an image and sending it to customer service', () => {
     homePage.visit_HomePage();
     Header.click_Contact_us();
     ContactUs.select_Customer_Service()

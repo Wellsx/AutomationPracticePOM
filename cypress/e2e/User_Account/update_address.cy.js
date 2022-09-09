@@ -5,7 +5,7 @@ import Data from '../../support/data';
 import Address from '../../POM/pages/address_page';
 
 describe('Update user address', () => {
-  it('Login and add a new user address', () => {
+  it('Login and update user address', () => {
     HomePage.visit_HomePage();
     Header.click_SignIn_button();
     Authentication.enterEmail(Data.userEmail)

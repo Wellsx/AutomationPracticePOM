@@ -2,7 +2,7 @@ import 'cypress-real-events/support';
 import topMenu from '../../POM/components/top-menu';
 import homePage from '../../POM/pages/home_page';
 
-describe('Top menu test', () => {
+describe('Top menu navigation button tests', () => {
   beforeEach(() => {
     homePage.visit_HomePage();
   });

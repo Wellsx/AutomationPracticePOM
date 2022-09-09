@@ -5,7 +5,7 @@ import Data from '../../support/data';
 import Address from '../../POM/pages/address_page';
 
 describe('Delete user address', () => {
-  it('Login and add a new user address', () => {
+  it('Login and delete user address', () => {
     HomePage.visit_HomePage();
     Header.click_SignIn_button();
     Authentication.enterEmail(Data.userEmail)

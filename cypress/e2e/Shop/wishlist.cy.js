@@ -8,7 +8,7 @@ import 'cypress-real-events/support';
 import Header from '../../POM/components/Header';
 
 describe('Adding an item to "My Wishlist"', () => {
-  it('Login and add an item to wishlist', () => {
+  it('Login and add an item to wishlist and verify wishlist', () => {
     HomePage.visit_HomePage();
     Header.click_SignIn_button();
     Authentication.enterEmail(Data.userEmail)

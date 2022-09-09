@@ -4,7 +4,7 @@ import RegistrationPage from '../../POM/pages/registration_page';
 import Header from '../../POM/components/Header';
 for (let i = 0; i <= 3; i++) {
   describe('Registration', () => {
-    it('Register a new user', () => {
+    it('Register multiple new users', () => {
       HomePage.visit_HomePage();
       Header.click_SignIn_button();
       RegistrationPage.createAccount(

@@ -4,7 +4,7 @@ import HomePage from '../../POM/pages/home_page';
 import femaleUsers from '../../fixtures/female_users.json';
 
 describe('Login', () => {
-  it('Logs the user in', () => {
+  it('Login as a newly registered female user', () => {
     HomePage.visit_HomePage();
     Header.click_SignIn_button();
     Authentication.enterEmail(

@@ -5,7 +5,7 @@ import MyAccount from '../../POM/pages/my_account_page';
 import Data from '../../support/data';
 
 describe('User order history', () => {
-  it('Login and open order history', () => {
+  it('Login open order history and verify last order ', () => {
     HomePage.visit_HomePage();
     Header.click_SignIn_button();
     Authentication.enterEmail(Data.userEmail)
