@@ -6,7 +6,7 @@ import Data from '../../support/data';
 
 describe('User order history', () => {
   it('Login open order history and verify last order ', () => {
-    HomePage.visit_HomePage();
+    HomePage.visit_HomePage(Data.device);
     Header.click_SignIn_button();
     Authentication.enterEmail(Data.userEmail)
       .enterPass(Data.userPassword)

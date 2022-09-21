@@ -6,7 +6,7 @@ import Address from '../../POM/pages/address_page';
 
 describe('Delete user address', () => {
   it('Login and delete user address', () => {
-    HomePage.visit_HomePage();
+    HomePage.visit_HomePage(Data.device);
     Header.click_SignIn_button();
     Authentication.enterEmail(Data.userEmail)
       .enterPass(Data.userPassword)

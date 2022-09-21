@@ -19,6 +19,8 @@ class Data {
 
   faker = faker;
 
+  device = 'macbook-15';
+
   email = faker.internet.email();
 
   male_email = 'testM+_' + this.getUnixTimeStamp() + '@testing.com';
@@ -63,6 +65,8 @@ class Data {
 
   woman = '2';
 
+  wrongpassword = 'asd321';
+
   save_email(user) {
     cy.readFile('cypress/fixtures/users.json').then((records) => {
       records.users.push({
@@ -89,6 +93,18 @@ class Data {
       cy.writeFile('cypress/fixtures/female_users.json', records);
     });
   }
+
+  lastEmail(gender) {
+    const records = require('../fixtures/' + gender + '_users.json');
+
+    let candidate = records.users.length - 1;
+    let lastEmail = records.users[candidate].email;
+
+    return lastEmail;
+  }
+
+  male_gender = 'male';
+  female_gender = 'female';
 }
 
 export default new Data();

@@ -11,7 +11,7 @@ import 'cypress-real-events/support';
 
 describe('Purchase an item as a logged in user', () => {
   it('Log in as a female user and purchase blouse', () => {
-    HomePage.visit_HomePage();
+    HomePage.visit_HomePage(Data.device);
     Header.click_SignIn_button();
     Authentication.enterEmail(
       femaleUsers.users[femaleUsers.users.length - 1].email

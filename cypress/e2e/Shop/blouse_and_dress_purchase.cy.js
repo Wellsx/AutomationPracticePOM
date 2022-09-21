@@ -11,7 +11,7 @@ import 'cypress-real-events/support';
 
 describe('Purchasing 2 items', () => {
   it('Purchase blouse and dress', () => {
-    HomePage.visit_HomePage();
+    HomePage.visit_HomePage(Data.device);
     TopMenu.visit_WomenBlouses();
     Blouses.buy_Blouse();
     Cart.close_Cart();

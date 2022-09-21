@@ -5,7 +5,7 @@ import Data from '../../support/data';
 
 describe('Customer Service message test', () => {
   it('Typing a sample message, uploading an image and sending it to customer service', () => {
-    homePage.visit_HomePage();
+    homePage.visit_HomePage(Data.device);
     Header.click_Contact_us();
     ContactUs.select_Customer_Service()
       .input_Email(Data.email)

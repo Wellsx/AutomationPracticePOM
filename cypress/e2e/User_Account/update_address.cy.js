@@ -6,7 +6,7 @@ import Address from '../../POM/pages/address_page';
 
 describe('Update user address', () => {
   it('Login and update user address', () => {
-    HomePage.visit_HomePage();
+    HomePage.visit_HomePage(Data.device);
     Header.click_SignIn_button();
     Authentication.enterEmail(Data.userEmail)
       .enterPass(Data.userPassword)

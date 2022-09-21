@@ -5,7 +5,7 @@ import Header from '../../POM/components/Header';
 
 describe('Registration', () => {
   it('Register a new male user', () => {
-    HomePage.visit_HomePage();
+    HomePage.visit_HomePage(Data.device);
     Header.click_SignIn_button();
     RegistrationPage.createAccount(Data.male_email)
       .select_Gender(Data.man)
@@ -27,7 +27,7 @@ describe('Registration', () => {
     Data.save_email_male(Data.male_email);
   });
   it('Register a new female user', () => {
-    HomePage.visit_HomePage();
+    HomePage.visit_HomePage(Data.device);
     Header.click_SignIn_button();
     RegistrationPage.createAccount(Data.female_email)
       .select_Gender(Data.woman)

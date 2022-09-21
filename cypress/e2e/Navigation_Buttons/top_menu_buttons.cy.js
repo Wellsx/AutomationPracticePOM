@@ -4,7 +4,7 @@ import homePage from '../../POM/pages/home_page';
 
 describe('Top menu navigation button tests', () => {
   beforeEach(() => {
-    homePage.visit_HomePage();
+    homePage.visit_HomePage(Data.device);
   });
 
   it('Women menu button', () => {

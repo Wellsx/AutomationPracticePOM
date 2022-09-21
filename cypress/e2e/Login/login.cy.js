@@ -4,10 +4,10 @@ import HomePage from '../../POM/pages/home_page';
 
 describe('Login', () => {
   it('Logs the user in', () => {
-    HomePage.visit_HomePage();
+    HomePage.visit_HomePage(Data.device);
     Header.click_SignIn_button();
-    Authentication.enterEmail('test456123@email23.com')
-      .enterPass('123456')
+    Authentication.enterEmail(Data.userEmail)
+      .enterPass(Data.userPassword)
       .clickSubmit();
   });
 });

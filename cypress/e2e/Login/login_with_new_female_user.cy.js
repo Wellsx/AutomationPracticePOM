@@ -1,15 +1,13 @@
 import Authentication from '../../POM/pages/authentication_page';
 import Header from '../../POM/components/Header';
 import HomePage from '../../POM/pages/home_page';
-import femaleUsers from '../../fixtures/female_users.json';
+import Data from '../../support/data';
 
 describe('Login', () => {
   it('Login as a newly registered female user', () => {
-    HomePage.visit_HomePage();
+    HomePage.visit_HomePage(Data.device);
     Header.click_SignIn_button();
-    Authentication.enterEmail(
-      femaleUsers.users[femaleUsers.users.length - 1].email
-    );
-    Authentication.enterPass('Pass123').clickSubmit();
+    Authentication.enterEmail(Data.lastEmail('female'));
+    Authentication.enterPass(Data.password).clickSubmit();
   });
 });

@@ -10,7 +10,7 @@ import 'cypress-real-events/support';
 
 describe('Purchasing a dress', () => {
   it('Purchase a dress and logging in', () => {
-    HomePage.visit_HomePage();
+    HomePage.visit_HomePage(Data.device);
     TopMenu.visit_EveningDresses();
     EveningDresses.buy_PrintedDress();
     Cart.click_Proceed_To_Checkout();

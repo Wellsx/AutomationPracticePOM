@@ -23,6 +23,7 @@
     "moment": "^2.29.4"
   },
   "devDependencies": {
-    "@faker-js/faker": "^7.4.0"
+    "@faker-js/faker": "^7.4.0",
+    "cypress-xpath": "^2.0.1"
   }
 }

@@ -5,7 +5,7 @@ import Header from '../../POM/components/Header';
 for (let i = 0; i <= 3; i++) {
   describe('Registration', () => {
     it('Register multiple new users', () => {
-      HomePage.visit_HomePage();
+      HomePage.visit_HomePage(Data.device);
       Header.click_SignIn_button();
       RegistrationPage.createAccount(
         'test+_' + Data.getUnixTimeStamp() + '@testing.com'

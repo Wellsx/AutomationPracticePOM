@@ -5,7 +5,7 @@ import MyAccount from '../../POM/pages/my_account_page';
 import Data from '../../support/data';
 describe('My personal information page', () => {
   it('My personal information button and page test', () => {
-    HomePage.visit_HomePage();
+    HomePage.visit_HomePage(Data.device);
     Header.click_SignIn_button();
     Authentication.enterEmail(Data.userEmail)
       .enterPass(Data.userPassword)
