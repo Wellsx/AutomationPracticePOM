@@ -1,4 +1,4 @@
-# [Cypress.io](https://www.cypress.io/) end-to-end automated tests of [automationpractice.com](http://automationpractice.com/index.php?) using Page Object Model (POM) design
+# End-to-end automated tests of [automationpractice.com](http://automationpractice.com/index.php?) using [Cypress.io](https://www.cypress.io/) and Page Object Model (POM) design
 
 ## Project setup
 
