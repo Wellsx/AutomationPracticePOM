@@ -4,7 +4,7 @@ import Data from '../../support/data';
 import 'cypress-real-events/support';
 import QuickView from '../../POM/pages/quick_view_page';
 describe('Purchasing a product from the homepage using quick view', () => {
-  it('Hover on a product and click quick view', () => {
+  it('Purchasing 2, M size, white Blouses through quick view modal', () => {
     HomePage.visit_HomePage(Data.device);
     MiddleHomePage.click_quick_view_2('Blouse');
     QuickView.verify_QuickView('Blouse')
