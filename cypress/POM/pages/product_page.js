@@ -24,7 +24,7 @@ class ProductPage {
 
   click_Color(color) {
     cy.get('#color_to_pick_list')
-      .find('[title=' + color + ']') // "[title='title']"
+      .find('[title=' + color + ']')
       .should('be.visible')
       .click();
     cy.get('#color_to_pick_list')

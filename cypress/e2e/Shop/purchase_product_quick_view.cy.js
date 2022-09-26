@@ -7,6 +7,10 @@ describe('Purchasing a product from the homepage using quick view', () => {
   it('Hover on a product and click quick view', () => {
     HomePage.visit_HomePage(Data.device);
     MiddleHomePage.click_quick_view_2('Blouse');
-    QuickView.click_Plus_QuantityMultiple(5);
+    QuickView.verify_QuickView('Blouse')
+      .select_size('M')
+      .click_Color('White')
+      .click_On_Plus_Quantity(2)
+      .add_To_Cart();
   });
 });

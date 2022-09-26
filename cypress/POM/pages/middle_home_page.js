@@ -31,6 +31,8 @@ class MiddleHomePage {
       .first()
       .and('be.visible')
       .click();
+
+  
   }
 }
 export default new MiddleHomePage();

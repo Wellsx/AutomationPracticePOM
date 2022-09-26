@@ -1,6 +1,24 @@
-# [Cypress.io](https://www.cypress.io/) end-to-end automated tests using Page Object Model (POM) design
+# [Cypress.io](https://www.cypress.io/) end-to-end automated tests of [automationpractice.com](http://automationpractice.com/index.php?) using Page Object Model (POM) design
 
-## [automationpractice.com](http://automationpractice.com/index.php?)
+## Project setup
+
+- Install [node.js](https://nodejs.org/en/)
+- Install [Visual Studio Code](https://code.visualstudio.com/download)
+- Clone [project](https://github.com/Wellsx/AutomationPracticePOM/archive/refs/heads/main.zip)
+- Open project in VS Code
+- Open terminal in VS Code shortcut `` CTRL+SHIFT+` ``
+- In VS Code terminal run: `npm init`
+- Next in VS Code terminal run: `npm install cypress`
+- After successfully installing Cypress in terminal run: `npx cypress open`
+  This will run Cypress for the first time and verify that everything is installed correctly.
+- Close the Cypress GUI runner by pressing CTRL+C in VS code terminal
+
+## Running tests
+
+- To run tests in GUI mode run `npx cypress open` in VS terminal
+- To run tests in headless mode run `npx cypress run` in VS terminal
+
+## Tests
 
 <details>
   <summary><b>Registration</b></summary>
