@@ -31,7 +31,7 @@ class Authentication {
     );
   }
 
-  verify_error() {
+  click_Submit_and_verify_error() {
     cy.get('#SubmitLogin').should('be.visible').click();
     cy.url().should(
       'eq',

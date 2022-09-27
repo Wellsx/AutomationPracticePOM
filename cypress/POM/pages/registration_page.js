@@ -162,13 +162,17 @@ class Register {
 
   submitAccount() {
     cy.get('#submitAccount').should('be.visible').click();
+
+    return this;
+  }
+
+  verify_account_creation() {
     cy.url().should('contain', 'controller=my-account');
     cy.get('.logout').should('be.visible');
 
     return this;
   }
   verify_error_message() {
-    cy.get('#submitAccount').should('be.visible').click();
     cy.url().should(
       'eq',
       Cypress.config().baseUrl + '/index.php?controller=authentication'

@@ -4,7 +4,7 @@
 
 - Install [node.js](https://nodejs.org/en/)
 - Install [Visual Studio Code](https://code.visualstudio.com/download)
-- Clone [project](https://github.com/Wellsx/AutomationPracticePOM/archive/refs/heads/main.zip)
+- Clone project repository
 - Open project in VS Code
 - Open terminal in VS Code shortcut `` CTRL+SHIFT+` ``
 - In VS Code terminal run: `npm init`

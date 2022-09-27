@@ -1,10 +1,9 @@
 import Authentication from '../../POM/pages/authentication_page';
 import HomePage from '../../POM/pages/home_page';
-import femaleUsers from '../../fixtures/female_users.json';
 import Blouses from '../../POM/pages/shop/blouses_page';
 import TopMenu from '../../POM/components/top-menu';
 import Checkout from '../../POM/pages/shop/checkout_page';
-import Cart from '../../POM/pages/shop/cart_page';
+import Cart from '../../POM/pages/shop/cart_modal_page';
 import EveningDresses from '../../POM/pages/shop/evening_dresses_page';
 import Data from '../../support/data';
 import 'cypress-real-events/support';
@@ -19,9 +18,7 @@ describe('Purchasing 2 items', () => {
     EveningDresses.buy_PrintedDress();
     Cart.click_Proceed_To_Checkout();
     Checkout.summary_step_guest();
-    Authentication.enterEmail(
-      femaleUsers.users[femaleUsers.users.length - 1].email
-    )
+    Authentication.enterEmail(Data.female_email)
       .enterPass(Data.password)
       .clickSubmitCheckoutPage();
     Checkout.address_step()

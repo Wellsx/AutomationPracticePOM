@@ -22,7 +22,8 @@ describe('Registration', () => {
       .select_Country('United States')
       .input_PhoneNumber(Data.phoneNumber)
       .input_Alias(Data.address)
-      .submitAccount();
+      .submitAccount()
+      .verify_account_creation();
 
     Data.save_email_male(Data.male_email);
   });
@@ -44,7 +45,8 @@ describe('Registration', () => {
       .select_Country('United States')
       .input_PhoneNumber(Data.phoneNumber)
       .input_Alias(Data.address)
-      .submitAccount();
+      .submitAccount()
+      .verify_account_creation();
 
     Data.save_email_female(Data.female_email);
   });

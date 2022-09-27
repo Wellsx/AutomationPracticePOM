@@ -24,7 +24,8 @@ for (let i = 0; i <= 3; i++) {
         .select_Country('United States')
         .input_PhoneNumber(Data.phoneNumber)
         .input_Alias(Data.address)
-        .submitAccount();
+        .submitAccount()
+        .verify_account_creation();
 
       Data.save_email('test+_' + Data.getUnixTimeStamp() + '@testing.com');
     });

@@ -94,6 +94,13 @@ class Data {
     });
   }
 
+  // save_price(user) {
+  //   cy.readFile('cypress/fixtures/automation_users.json').then((records) => {
+  //     records[userName].productPrice = finalPrice;
+  //     cy.writeFile('cypress/fixtures/automation_users.json', records);
+  //   });
+  // }
+
   lastEmail(gender) {
     const records = require('../fixtures/' + gender + '_users.json');
 

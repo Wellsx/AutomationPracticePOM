@@ -9,6 +9,6 @@ describe('Login', () => {
     Header.click_SignIn_button();
     Authentication.enterEmail(Data.userEmail)
       .enterPass(Data.wrongpassword)
-      .verify_error();
+      .click_Submit_and_verify_error();
   });
 });
