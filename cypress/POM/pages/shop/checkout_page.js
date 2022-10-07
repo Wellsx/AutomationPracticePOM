@@ -1,4 +1,15 @@
 class Checkout {
+  verify_checkout_modal() {
+    cy.get('#layer_cart')
+      .find('h2')
+      .contains('Product successfully added to your shopping cart')
+      .should('be.visible');
+
+    cy.get('#layer_cart').find('.icon-ok').should('be.visible');
+    return this;
+  }
+
+  check_price() {}
   summary_step() {
     cy.url().should(
       'eq',

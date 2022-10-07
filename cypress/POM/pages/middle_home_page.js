@@ -34,6 +34,20 @@ class MiddleHomePage {
     return this;
   }
 
+  click_Product_fixed(productName) {
+    cy.get('.product-name')
+      .contains(productName)
+      .should('be.visible')
+      .click()
+      .then(() => {
+        cy.get('h1').contains(productName).should('be.visible');
+        cy.url().should(
+          'contain',
+          Cypress.config().baseUrl + '/index.php?id_product='
+        );
+      });
+  }
+
   click_Quick_View(name) {
     cy.get('.product-image-container')
       .find('[title=' + '"' + name + '"' + ']')

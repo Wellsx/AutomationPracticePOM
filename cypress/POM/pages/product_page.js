@@ -36,7 +36,7 @@ class ProductPage {
 
   add_To_Cart() {
     cy.get('#add_to_cart').should('be.visible').click();
-    cy.get('#layer_cart').should('be.visible');
+
     return this;
   }
 }

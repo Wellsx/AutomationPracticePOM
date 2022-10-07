@@ -1,0 +1,13 @@
+{
+"Blouse": {
+        "name": "Blouse",
+        "price": "27.00"
+    
+},
+"Faded_Short_Sleeve_T_shirts": {
+        "name": "Faded Short Sleeve T-shirts",
+        "price": "16.51",
+        "size_L": "L"
+        
+    }
+}
