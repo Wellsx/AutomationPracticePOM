@@ -1,6 +1,7 @@
 import 'cypress-real-events/support';
 import TopMenu from '../../POM/components/top-menu';
 import HomePage from '../../POM/pages/home_page';
+import Data from '../../support/data';
 
 describe('Top menu navigation button tests', () => {
   beforeEach(() => {
