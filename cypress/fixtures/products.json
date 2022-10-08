@@ -1,7 +1,9 @@
 {
 "Blouse": {
         "name": "Blouse",
-        "price": "27.00"
+        "price": "27.00",
+        "size_L": "L",
+        "color_White": "White"
     
 },
 "Faded_Short_Sleeve_T_shirts": {

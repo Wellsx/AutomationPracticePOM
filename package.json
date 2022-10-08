@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^7.4.0",
+    "cypress-grep": "^3.0.3",
     "cypress-iframe": "^1.0.1",
     "cypress-real-events": "^1.7.1",
     "cypress-xpath": "^2.0.1"
