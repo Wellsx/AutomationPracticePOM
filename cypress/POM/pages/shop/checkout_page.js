@@ -101,11 +101,19 @@ class Checkout {
     return this;
   }
 
-  confirm_order() {
+  confirm_order_cheque() {
     cy.url().should('contain', '/index.php?controller=order-confirmation');
     cy.get('.alert')
       .should('be.visible')
       .and('have.class', 'alert alert-success');
+    return this;
+  }
+  confirm_order_bankwire() {
+    cy.url().should('contain', '/index.php?controller=order-confirmation');
+    cy.get('.cheque-indent')
+      .children()
+      .should('contain', 'Your order on My Store is complete.')
+      .and('be.visible');
     return this;
   }
 }

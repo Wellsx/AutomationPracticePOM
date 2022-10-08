@@ -93,7 +93,10 @@ class TopMenu {
       .type('{enter}')
       .should('have.value', search);
 
-    cy.url().should('eq', Cypress.config().baseUrl + 'controller=search');
+    cy.url().should(
+      'contain',
+      Cypress.config().baseUrl + '/index.php?controller=search'
+    );
     cy.get('.navigation_page').should('be.visible').and('have.text', 'Search');
     cy.get('.lighter').should('be.visible').and('contain', search);
     return this;

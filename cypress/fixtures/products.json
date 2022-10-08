@@ -3,13 +3,26 @@
         "name": "Blouse",
         "price": "27.00",
         "size_L": "L",
+        "size_M": "M",
+        "size_S": "S",
         "color_White": "White"
     
 },
 "Faded_Short_Sleeve_T_shirts": {
         "name": "Faded Short Sleeve T-shirts",
         "price": "16.51",
-        "size_L": "L"
+        "size_L": "L",
+        "size_M": "M",
+        "size_S": "S"
         
-    }
+    },
+"Printed_Summer_Dress": {
+        "name": "Printed Summer Dress",
+        "price": "$28.98",
+        "size_L": "L",
+        "size_M": "M",
+        "size_S": "S"
+
+}       
+
 }

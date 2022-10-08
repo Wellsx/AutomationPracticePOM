@@ -1,6 +1,7 @@
 import Authentication from '../../POM/pages/authentication_page';
 import Header from '../../POM/components/Header';
 import HomePage from '../../POM/pages/home_page';
+import Data from '../../support/data';
 
 describe('Login', () => {
   it('Logs the user in', () => {

@@ -6,6 +6,8 @@ import ProductDetails from '../../POM/pages/product_details_page';
 import CheckoutModal from '../../POM/pages/shop/checkout_modal';
 import Product from '../../fixtures/products.json';
 import Users from '../../fixtures/automation_users.json';
+import Checkout from '../../POM/pages/shop/checkout_page';
+import Authentication from '../../POM/pages/authentication_page';
 
 describe('Purchasing a product from the homepage', () => {
   it('Purchasing an L size, White Blouse from the home page checking dynamic price', () => {
@@ -19,5 +21,15 @@ describe('Purchasing a product from the homepage', () => {
     CheckoutModal.verify_checkout_modal()
       .check_price(Users.QA_John.name)
       .click_Proceed_to_checkout();
+    Checkout.summary_step_guest();
+    Authentication.enterEmail(Data.lastEmail('female'))
+      .enterPass(Data.password)
+      .clickSubmitCheckoutPage();
+    Checkout.address_step()
+      .check_terms_of_service()
+      .shipping_step()
+      .payment_bankwire()
+      .bankwire_payment_confirm()
+      .confirm_order_bankwire();
   });
 });

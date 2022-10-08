@@ -1,5 +1,7 @@
 # End-to-end automated tests of [automationpractice.com](http://automationpractice.com/index.php?) using [Cypress.io](https://www.cypress.io/) and Page Object Model (POM) design
 
+---
+
 ## Project setup
 
 - Install [node.js](https://nodejs.org/en/)
@@ -45,10 +47,11 @@
 <details>
   <summary><b>Shop</b></summary>
 
-- [dress_purchase.cy.js](https://github.com/Wellsx/AutomationPracticePOM/blob/main/cypress/e2e/Shop/dress_purchase.cy.js) - Purchasing a dress and logging in through order purchase step
-- [blouse_purchase.cy.js](https://github.com/Wellsx/AutomationPracticePOM/blob/main/cypress/e2e/Shop/blouse_purchase.cy.js) - Log in as a female user and purchase blouse
-- [blouse_and_dress_purchase.cy.js](https://github.com/Wellsx/AutomationPracticePOM/blob/main/cypress/e2e/Shop/blouse_and_dress_purchase.cy.js) - Purchasing multiple items
-- [wishlist.cy.js](https://github.com/Wellsx/AutomationPracticePOM/blob/main/cypress/e2e/Shop/wishlist.cy.js) - Login and add an item to wishlist and verify wishlist
+- [verify_product_price.cy.js](https://github.com/Wellsx/AutomationPracticePOM/blob/main/cypress/e2e/Shop/verify_product_price.cy.js) - Comparing the price on the homepage to the product page price
+- [purchase_product_fixed_price.cy.js](https://github.com/Wellsx/AutomationPracticePOM/blob/main/cypress/e2e/Shop/purchase_product_fixed_price.cy.js) - Purchasing a product and checking its fixed price
+- [purchase_product_home_page.cy.js](https://github.com/Wellsx/AutomationPracticePOM/blob/main/cypress/e2e/Shop/purchase_product_home_page.cy.js) - Purchasing a product from the homepage
+- [purchase_product_quick_view.cy.js](https://github.com/Wellsx/AutomationPracticePOM/blob/main/cypress/e2e/Shop/purchase_product_quick_view.cy.js) - Purchasing a product from the homepage through the quick view modal
+- [purchase_multiple_products.cy.js](https://github.com/Wellsx/AutomationPracticePOM/blob/main/cypress/e2e/Shop/purchase_multiple_products.cy.js) - Purchasing multiple products from the homepage
 
 </details>
 
@@ -60,6 +63,7 @@
 - [add_new_address.cy.js](https://github.com/Wellsx/AutomationPracticePOM/blob/main/cypress/e2e/User_Account/add_new_address.cy.js) - Login and add a new user address
 - [delete_address.cy.js](https://github.com/Wellsx/AutomationPracticePOM/blob/main/cypress/e2e/User_Account/delete_address.cy.js) - Login and delete user address
 - [order_history.cy.js](https://github.com/Wellsx/AutomationPracticePOM/blob/main/cypress/e2e/User_Account/order_history.cy.js) - Login open order history and verify last order
+- [wishlist.cy.js](https://github.com/Wellsx/AutomationPracticePOM/blob/main/cypress/e2e/User_Account/wishlist.cy.js) - Login and add an item to wishlist and verify wishlist
 
 </details>
 
@@ -71,3 +75,15 @@
 - [customer_service.cy.js](https://github.com/Wellsx/AutomationPracticePOM/blob/main/cypress/e2e/Navigation_Buttons/customer_service.cy.js) - Typing a sample message, uploading an image and sending it to customer service
 
 </details>
+
+---
+
+## CircleCI
+
+Latest run status:
+
+[![AutomationPracticePOM](https://circleci.com/gh/Wellsx/AutomationPracticePOM.svg?style=svg)](https://app.circleci.com/pipelines/github/Wellsx/AutomationPracticePOM?branch=main)
+
+## License
+
+This project is licensed under the terms of the [MIT LICENSE](https://github.com/Wellsx/AutomationPracticePOM/blob/main/LICENSE)

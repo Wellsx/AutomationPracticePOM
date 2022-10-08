@@ -1,34 +1,34 @@
 import 'cypress-real-events/support';
-import topMenu from '../../POM/components/top-menu';
-import homePage from '../../POM/pages/home_page';
+import TopMenu from '../../POM/components/top-menu';
+import HomePage from '../../POM/pages/home_page';
 
 describe('Top menu navigation button tests', () => {
   beforeEach(() => {
-    homePage.visit_HomePage(Data.device);
+    HomePage.visit_HomePage(Data.device);
   });
 
   it('Women menu button', () => {
-    topMenu.visit_Women();
+    TopMenu.visit_Women();
   });
   it('Blouses menu button', () => {
-    topMenu.visit_WomenBlouses();
+    TopMenu.visit_WomenBlouses();
   });
   it('Women Tshirts button', () => {
-    topMenu.visit_WomenTshirts();
+    TopMenu.visit_WomenTshirts();
   });
   it('Dresses menu button', () => {
-    topMenu.visit_Dresses();
+    TopMenu.visit_Dresses();
   });
   it('Casual Dresses menu button', () => {
-    topMenu.visit_CasualDresses();
+    TopMenu.visit_CasualDresses();
   });
   it('Evening Dresses menu button', () => {
-    topMenu.visit_EveningDresses();
+    TopMenu.visit_EveningDresses();
   });
   it('Summer Dresses menu button', () => {
-    topMenu.visit_SummerDresses();
+    TopMenu.visit_SummerDresses();
   });
   it('Tshirts menu button', () => {
-    topmenu.visit_Tshirts();
+    Topmenu.visit_Tshirts();
   });
 });

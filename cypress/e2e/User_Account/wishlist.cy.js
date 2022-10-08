@@ -4,8 +4,8 @@ import Blouse from '../../POM/pages/shop/blouses_page';
 import TopMenu from '../../POM/components/top-menu';
 import Data from '../../support/data';
 import Wishlist from '../../POM/pages/wishlist_page';
-import 'cypress-real-events/support';
 import Header from '../../POM/components/Header';
+import 'cypress-real-events/support';
 
 describe('Adding an item to "My Wishlist"', () => {
   it('Login and add an item to wishlist and verify wishlist', () => {
