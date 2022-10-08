@@ -29,6 +29,6 @@ describe('Top menu navigation button tests', () => {
     TopMenu.visit_SummerDresses();
   });
   it('Tshirts menu button', () => {
-    Topmenu.visit_Tshirts();
+    TopMenu.visit_Tshirts();
   });
 });
