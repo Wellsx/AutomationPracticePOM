@@ -12,3 +12,5 @@ workflows:
     jobs:
       - cypress/run
         record: true
+    
+
