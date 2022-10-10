@@ -12,7 +12,5 @@ workflows:
     jobs:
       - cypress/run
 
-store_test_results:
-  path: AutomationPracticePOM/test-results
     
 
