@@ -1,16 +1,12 @@
 # This config is equivalent to both the '.circleci/extended/orb-free.yml' and the base '.circleci/config.yml'
+
 version: 2.1
-
-
 orbs:
   node: circleci/node@4.7
   cypress: cypress-io/cypress@1
 
-
 workflows:
-  sample:
+  build:
     jobs:
-      - cypress/run
-
-    
-
+      - cypress/run:
+          store_artifacts: true

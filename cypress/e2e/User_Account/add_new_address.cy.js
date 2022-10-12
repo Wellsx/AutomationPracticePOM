@@ -8,7 +8,7 @@ describe('Update user address', () => {
   it('Login and add a new user address', () => {
     HomePage.visit_HomePage(Data.device);
     Header.click_SignIn_button();
-    Authentication.enterEmail(Data.lastEmail('female'))
+    Authentication.enterEmail(Data.lastEmail('male'))
       .enterPass(Data.password)
       .clickSubmit();
     Address.click_Update_Address()
